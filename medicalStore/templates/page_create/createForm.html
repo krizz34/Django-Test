@@ -1,0 +1,25 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background"{% endblock %}
+
+{% block 'content' %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container p-5 mt-3 customFormLayout">
+        {{form.non_field_errors}}
+        <div class="w-50 py-3 px-4 mx-auto rounded bg-white">
+            <h2 class="text-center font-weight-bold mb-4" style="color: #ff9c22;">Medicine Details</h2>
+            <div class="row">
+                <div class="col">
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        {{form.as_div}}
+                        <button class="btn text-light btn-block mt-4" style="background-color: #ff9c22;" value="submit" type="submit">Add Medicine</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+{% endblock %}

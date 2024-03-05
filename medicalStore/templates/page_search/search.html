@@ -1,0 +1,35 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background"{% endblock %}
+
+{% block 'content' %}
+
+<div class="text-white d-flex flex-column align-items-center justify-content-center vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-start" style="margin-left: 155px;">
+                    <h4 class="mr-3">Search Results for '{{ search_term }}'</h4>
+                </div>
+                <div class="bg-white mx-auto mt-2 p-3 rounded" style="max-width: 800px;">
+                    {% if matching_medicines %}
+                        <ul>
+                            {% for medicine in matching_medicines %}
+                                <li>
+                                    <h2 style="font-weight: bold; color: #ff9c22;">{{ medicine.Mname }}</h2>
+                                    <h6 style="color: #ff9c22;">{{ medicine.Mdesc }}</h6>
+                                    <h5 style="color: #ff9c22;">Stock Left: <span style="font-weight: bold;">{{ medicine.Mstock }}</span></h5>
+                                    <h4 style="color: #ff9c22;">Price: ₹ <span style="font-weight: bold;">{{ medicine.Mprice }}</span></h4>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="font-weight-bold" style="color: #ff9c22;">Medicine not found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

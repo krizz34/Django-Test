@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white" style="max-width: 665px; margin: 0 auto; border-radius: 30px;">
+  <a class="navbar-brand" href="{% url 'home' %}">
+    <img src="/static/logo.png" alt="logo of PharamLore" class="img-fluid customNavBrand" style="max-height: 25px; margin-top: -6px;"">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
+          <li class="nav-item">
+              <a class="nav-link font-weight-bold customNavItem" href="{% url 'readData' %}" style="color: #ff9c22;">Medicines</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link font-weight-bold customNavItem" href="{% url 'form' %}" style="color: #ff9c22;">Add New Medicine</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link font-weight-bold customNavItem" href="{% url 'aboutus' %}" style="color: #ff9c22;">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link font-weight-bold customNavItem" href="{% url 'contactus' %}" style="color: #ff9c22;">Contact Us</a>
+          </li>
+      </ul>
+
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle customNavItem" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: #ff9c22;">
+                  <i class="fas fa-user-circle"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item disabled" href="{% url 'signUp' %}">Sign Up</a>
+                  <a class="dropdown-item disabled" href="{% url 'login' %}">Login</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+              </div>
+          </li>
+      </ul>
+  </div>
+</nav>

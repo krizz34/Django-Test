@@ -1,0 +1,26 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background"{% endblock %}
+
+{% block 'content' %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container mt-3">
+        {{form.non_field_errors}}
+        <div class="w-50 py-3 px-4 mx-auto rounded bg-white">
+            <h2 class="text-center font-weight-bold mb-4" style="color: #ff9c22;">Confirm Delete</h2>
+            <div class="row">
+                <div class="col">
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <label for="confo">Are you sure you want to delete {{medic_name}}?</label><br>
+                        <input class="btn btn-danger text-light p-1 mb-2" value="Confirm" name="confo" type="submit">
+                        <a href="{% url 'readData' %}" class="btn btn-primary text-light p-1 mb-2">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+{% endblock %}

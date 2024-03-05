@@ -1,0 +1,47 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background" style="overflow: visible !important;"{% endblock %}
+
+{% block 'content' %}
+
+<div class="container mt-4 table-container mx-auto rounded bg-white p-3">
+    <h2 class="text-center font-weight-bold mb-4" style="color: #ff9c22;">Medicine List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Medicine Id</th>
+                <th>Medicine Name</th>
+                <th class="text-center">Description</th>
+                <th>Stock Available</th>
+                <th>Price (INR)</th>
+                <th colspan="2" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in medicData %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.Mname}}</td>
+                    <td>{{item.Mdesc}}</td>
+                    <td>{{item.Mstock}}</td>
+                    <td>{{item.Mprice}}</td>
+                    <td>
+                        <a href="{% url 'update' item.id %}" class="btn customReadButton" style="background-color: black !important;" value="edit" type="submit">
+                            <i class="fas fa-pencil-alt text-light"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{% url 'delete' item.id %}" class="btn customReadButton" style="background-color: red !important;" value="edit" type="submit">
+                            <i class="fas fa-trash text-light"></i>
+                        </a>
+                    </td>
+                    <!-- <td>
+                        <a href="#" class="btn btn-info" value="edit" type="submit">Generate PDF</a>
+                    </td> -->
+                </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

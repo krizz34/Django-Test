@@ -1,0 +1,28 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background"{% endblock %}
+
+{% block 'content' %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container mt-3">
+        <div class="w-50 py-3 px-4 mx-auto rounded bg-white">
+            <h2 class="text-center font-weight-bold mb-4" style="color: #ff9c22;">LOG OUT</h2>
+            <div class="row">
+                <div class="col">
+                    {% if user.is_authenticated %}
+                        <p>You are currently logged in as {{ user.username }}.</p>
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            <button class="btn text-light btn-block" style="background-color: #ff9c22;" value="submit" type="submit">Log Out</button>
+                        </form>
+                    {% else %}
+                        <p>You are currently not logged in.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+{% endblock %}

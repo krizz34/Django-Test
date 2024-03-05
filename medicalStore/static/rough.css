@@ -1,0 +1,29 @@
+#row{
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+}
+#col{
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+}
+#list{
+    background-color: #dbdbdb;
+}
+dt{
+    text-align: center;
+}
+
+.dfg{
+    background-color: aqua;
+    border-radius: 8px;
+}

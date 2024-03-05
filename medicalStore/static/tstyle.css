@@ -1,0 +1,70 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    background-color: white;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.newsbox{
+    border: 1px solid grey;
+    padding: 10px;
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+    width: 950px;
+    margin-left: 200px;
+    height: fit-content;
+    margin: 20px auto;
+    border-radius: 14px;
+    transition: transform 0.2s;    
+}
+
+.newsbox:hover{
+    transform: scale(1.05);
+}
+
+.comment{
+    padding: 25px;
+    border: 1px; 
+    color: crimson; 
+    background-color: rgb(219, 120, 140); 
+    color: crimson; 
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.flexer{
+    display: flex;
+    align-items: center;
+}
+
+.aboutus{
+    text-align: center ;
+}
+
+.about-para{
+    font-size: 22px;
+    margin: 200px;
+    margin-top: 2%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.news-detail-box{
+    border: 1px black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+    margin: 150px;
+    margin-top: 30px;
+}
+
+.pic-box{
+    width: 510px;
+    align-items: center;
+    margin-left: 320px;
+}

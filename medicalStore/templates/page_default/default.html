@@ -1,0 +1,20 @@
+{% extends 'layout/layoutOriginal.html' %}
+
+{% block body_class %}class="home-background"{% endblock %}
+
+{% block 'content' %}
+    <div class="text-right" style="margin-bottom: -200px; margin-top: 50px;">
+        <img src="/static/home-Logo.png" alt="logo of PharamLore" class="img-fluid" style="max-height: 180px; margin-right: 40px;">
+    </div>
+    <div class="text-white d-flex align-items-center justify-content-center vh-100" style="margin-left: -500px;">
+        <form class="search" action="{% url 'search' %}" method="GET">
+            <div class="input-group">
+                <input class="customInput form-control mr-sm-2" type="search" placeholder="Name of your Medicine" name="search_term">
+                <div class="input-group-append">
+                    <button class="btn customButton my-2 my-sm-0" type="submit"><span class="buttonText"></span> Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
